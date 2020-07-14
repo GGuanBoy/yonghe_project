@@ -5,6 +5,15 @@ public class Door {
     private String name;
     private String tel;
     private String addr;
+    private String sale;
+
+    public String getSale() {
+        return sale;
+    }
+
+    public void setSale(String sale) {
+        this.sale = sale;
+    }
 
     public Integer getId() {
         return id;
