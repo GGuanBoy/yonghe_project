@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DoorDao {
+    //查询所有
     public List<Door> findAll() throws Exception {
         Connection conn =  DBUtils.getConnectionByDatasource();
         String sql = "select * from tb_door";
