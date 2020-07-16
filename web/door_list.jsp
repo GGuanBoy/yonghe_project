@@ -29,6 +29,11 @@
 	<a href="door_add.jsp" target="rightFrame">新增门店</a>
 	<a>&nbsp;&nbsp;|&nbsp;&nbsp;</a>
 	<a href="#" onclick="showsale()" target="rightFrame">查看门店销售额</a>
+	<div style="float: right">
+		<form action="${pageContext.request.contextPath}/downexcel">
+			<input type="submit" value="报表导出">
+		</form>
+	</div>
 </div>
 <hr/>
 <table border="1">
@@ -40,18 +45,6 @@
 		<th class="width-80">操 作</th>
 	</tr>
 
-	<%--<!-- 模版数据 -->--%>
-	<%--<tr>--%>
-	<%--<td>1</td>--%>
-	<%--<td>永和大王(北三环西路店)</td>--%>
-	<%--<td>010-62112313</td>--%>
-	<%--<td>北三环西路甲18号院-1号大钟寺中坤广场d座</td>--%>
-	<%--<td>--%>
-	<%--<a href="doorDelete?id=">删除</a>--%>
-	<%--&nbsp;|&nbsp;--%>
-	<%--<a href="doorInfo?id=">修改</a>--%>
-	<%--</td>--%>
-	<%--</tr>--%>
 	<c:forEach items="${list}" var="door" varStatus="status">
 		<tr>
 			<td>${status.count}</td>

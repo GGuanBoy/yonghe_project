@@ -22,6 +22,7 @@ public class DoorDao {
             door.setName(rs.getString("name"));
             door.setTel(rs.getString("tel"));
             door.setAddr(rs.getString("addr"));
+            door.setSale(rs.getString("sale"));
             list.add(door);
         }
         conn.close();
@@ -30,7 +31,7 @@ public class DoorDao {
     }
     public void add(Door door) throws Exception {
         Connection conn = DBUtils.getConnectionByDatasource();
-        String sql = "insert into tb_door values(null,?,?,?)";
+        String sql = "insert into tb_door values(null,?,?,?,null)";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setString(1,door.getName());
         ps.setString(2,door.getTel());

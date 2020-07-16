@@ -18,5 +18,11 @@
 	<div class="menu-bar">
 		<a href="${pageContext.request.contextPath}/orderList" target="rightFrame">› 订单管理</a>
 	</div>
+	<div class="menu-bar">
+		<a href="#" target="rightFrame"></a>
+	</div>
+	<div class="menu-bar">
+		<a href="${pageContext.request.contextPath}/alipay/alipay.trade.page.pay.jsp" target="rightFrame">服务续租</a>
+	</div>
 </body>
 </html>
